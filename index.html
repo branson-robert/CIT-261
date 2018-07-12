@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Canvas Resize</title>
+  <meta charset="utf-8">
+<style>canvas {
+	border: 1px solid black;
+	}
+body {
+	margin: 0;
+	}
+</style>
+<!--  <link rel="stylesheet" href="main.css" /> -->
+</head>
+<body>
+<!-- <h1>Nothing</h1> -->
+<!-- <button id="btn" onclick="animate()">Push</button> -->
+<canvas>
+
+</canvas>
+<script>
+var canvas = document.querySelector('canvas');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+var c = canvas.getContext('2d');
+
+<!-- for (var i = 0; i < 3; i++) { -->
+	<!-- var x = Math.random() * window.innerWidth; -->
+	<!-- var y = Math.random() * window.innerHeight; -->
+<!-- c.beginPath(); -->
+<!-- c.arc(x, y, 30, 0, Math.PI * 2, false); -->
+<!-- c.stroke(); -->
+<!-- c.strokeStyle = 'blue'; -->
+<!-- c.stroke(); -->
+<!-- } -->
+
+var x = 200;
+function animate() {
+	requestAnimationFrame(animate);
+	c.beginPath();
+c.arc(x, 200, 30, 0, Math.PI * 2, false);
+c.strokeStyle = 'blue';
+c.stroke();
+
+x += 1;
+
+	}
+		
+animate();
+</script>
+</body>
+</html>
